@@ -1,1 +1,47 @@
-/* EMPTY FILE */
+/* =========================
+   THEME TOGGLE (GOOGLE STYLE)
+   ========================= */
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  z-index: 4000;
+  user-select: none;
+}
+
+.theme-toggle span {
+  font-size: 1rem;
+}
+
+.toggle-track {
+  width: 36px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+  position: relative;
+}
+
+.toggle-thumb {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.25s ease;
+}
+
+[data-theme="dark"] .toggle-thumb {
+  transform: translateX(16px);
+}
